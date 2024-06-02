@@ -1,0 +1,126 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  position: relative;
+}
+
+.header__hamburger {
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.header__logo a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.header__search {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  margin: 0 20px;
+  
+}
+
+.header__search input {
+  padding: 5px;
+  font-size: 16px;
+  width: 100%;
+  max-width: 400px;
+  margin-right: 5px;
+  border-radius: 6px;
+}
+
+.header__searchButton {
+  padding: 6px 12px;
+  background-color: #ff6600;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.header__nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.header__nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  position: relative;
+}
+
+.header__nav a:hover {
+  color: #ff6600;
+}
+
+.header__account {
+  position: relative;
+  cursor: pointer;
+}
+
+.header__accountDropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #444;
+  color: #fff;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  min-width: 150px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+}
+
+.header__accountDropdown li {
+  padding: 10px;
+  border-bottom: 1px solid #555;
+}
+
+.header__accountDropdown li a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+}
+
+.header__accountDropdown li a:hover {
+  background-color: #555;
+}
+
+@media (max-width: 768px) {
+  .header__nav {
+    display: none;
+  }
+  .header__hamburger {
+    display: block;
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}

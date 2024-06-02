@@ -1,0 +1,33 @@
+.login, .register {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .login h2, .register h2 {
+    text-align: center;
+  }
+  
+  .login form, .register form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .login input, .register input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .login .btn, .register .btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  

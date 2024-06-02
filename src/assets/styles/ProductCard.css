@@ -1,0 +1,65 @@
+/* src/assets/styles/ProductCard.css */
+.product-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s;
+  max-width: 300px;
+  margin: 20px;
+  text-decoration: none; /* Remove underline from links */
+  color: inherit; /* Inherit color from parent */
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+.product-card__image {
+  width: 100%;
+  height: auto;
+}
+
+.product-card__info {
+  padding: 16px;
+}
+
+.product-card__title {
+  font-size: 1.5rem;
+  margin: 8px 0;
+}
+
+.product-card__rating {
+  display: flex;
+  align-items: center;
+  margin: 8px 0;
+}
+
+.product-card__rating .rating-star {
+  color: gold;
+  margin-right: 4px;
+}
+
+.product-card__company, .product-card__category {
+  font-size: 1rem;
+  color: #555;
+  margin: 4px 0;
+}
+
+.product-card__price {
+  display: flex;
+  align-items: center;
+  margin: 16px 0;
+}
+
+.product-card__prevPrice {
+  text-decoration: line-through;
+  color: #888;
+  margin-right: 8px;
+}
+
+.product-card__newPrice {
+  font-size: 1.5rem;
+  color: #e74c3c;
+}

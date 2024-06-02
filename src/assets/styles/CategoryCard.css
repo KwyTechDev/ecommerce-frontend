@@ -1,0 +1,26 @@
+/* src/assets/styles/CategoryCard.css */
+
+.category-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    width: 80%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    margin:auto;
+    margin-bottom: 10px;
+    height:300px
+  }
+  
+  .category-card h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  
+  .category-card p {
+    font-size: 16px;
+    color: #666;
+  }
+  

@@ -49,8 +49,13 @@ const Cart = () => {
   };
 
   const handleCheckout = () => {
-    // Implement checkout logic here, e.g., redirect to payment page
-    alert('Redirecting to checkout page...');
+    // Store cart information in localStorage
+    localStorage.setItem('checkoutCartItems', JSON.stringify(cartItems));
+    localStorage.setItem('checkoutTotalPrice', totalPrice.toFixed(2));
+    localStorage.setItem('checkoutTotalQuantity', totalQuantity);
+    
+    // Redirect to checkout page
+    window.location.href = '/checkout';
   };
 
   return (

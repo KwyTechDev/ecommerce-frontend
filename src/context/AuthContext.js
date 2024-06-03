@@ -1,27 +1,30 @@
 import React, { createContext, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 
-export const AuthContext = createContext();
+// Create the AuthContext with default values
+export const AuthContext = createContext({
+  user: null,
+  login: () => {},
+  register: () => {},
+  logout: () => {}
+});
 
-const AuthProvider = ({ children }) => {
+export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
-  const navigate = useNavigate();
 
   const login = (email, password) => {
-    // Implement login logic
+    // Implement login logic here
+    // For example:
     setUser({ email });
-    navigate('/');
   };
 
   const register = (email, password) => {
-    // Implement registration logic
+    // Implement registration logic here
+    // For example:
     setUser({ email });
-    navigate('/');
   };
 
   const logout = () => {
     setUser(null);
-    navigate('/login');
   };
 
   return (
@@ -30,5 +33,3 @@ const AuthProvider = ({ children }) => {
     </AuthContext.Provider>
   );
 };
-
-export default AuthProvider;

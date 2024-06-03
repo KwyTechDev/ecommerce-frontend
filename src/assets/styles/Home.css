@@ -14,3 +14,86 @@
   gap: 20px;
   justify-content: center;
 }
+
+/* Media Queries */
+
+/* For small devices (375x667) */
+@media (max-width: 375px) {
+  .home {
+    padding: 10px;
+  }
+
+  .home h1 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .home__products {
+    gap: 10px;
+  }
+  
+  .home__product-card {
+    width: 100%; /* Make product cards take full width on small screens */
+    margin-bottom: 10px;
+  }
+}
+
+/* For medium devices (tablets, 768px) */
+@media (max-width: 768px) {
+  .home {
+    padding: 15px;
+  }
+
+  .home h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .home__products {
+    gap: 15px;
+  }
+
+  .home__product-card {
+    width: calc(50% - 15px); /* Make product cards take half width with gap */
+  }
+}
+
+/* For large devices (desktops, 1024px) */
+@media (max-width: 1024px) {
+  .home {
+    padding: 20px;
+  }
+
+  .home h1 {
+    font-size: 2.5rem;
+    margin-bottom: 35px;
+  }
+
+  .home__products {
+    gap: 20px;
+  }
+
+  .home__product-card {
+    width: calc(33.333% - 20px); /* Make product cards take one-third width with gap */
+  }
+}
+
+/* For extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .home {
+    padding: 20px;
+  }
+
+  .home h1 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+  }
+
+  .home__products {
+    gap: 20px;
+  }
+
+  .home__product-card {
+    width: calc(25% - 20px); /* Make product cards take one-fourth width with gap */
+  }
+}

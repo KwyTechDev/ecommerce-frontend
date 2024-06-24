@@ -1,6 +1,8 @@
 import React, { useState, useContext } from 'react';
 import { AuthContext } from '../context/AuthContext';
 import '../assets/styles/Register.css';
+import { Link } from 'react-router-dom';
+import Login from './Login';
 
 const Register = () => {
   const { register } = useContext(AuthContext);
@@ -26,6 +28,13 @@ const Register = () => {
           <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" required />
           <input type="password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} placeholder="Confirm Password" required />
           <button type="submit" className="btn">Register</button>
+          <div className='links'>
+          <Link to = ''>Forgotten password</Link>
+          <Link to = '/Login'>Have an Account</Link>
+          </div>
+          
+
+
         </form>
       </div>
     </div>

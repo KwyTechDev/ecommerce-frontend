@@ -25,7 +25,7 @@ const Header = () => {
           ☰
         </div>
         <div className="header__logo">
-          <Link to="/">MyShop</Link>
+          
         </div>
         <div className="header__search">
           <input type="text" placeholder="Search products, brands, categories..." />

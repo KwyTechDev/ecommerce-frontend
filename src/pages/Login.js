@@ -1,6 +1,8 @@
 import React, { useState, useContext } from 'react';
 import { AuthContext } from '../context/AuthContext';
 import '../assets/styles/Login.css';
+import { Link } from 'react-router-dom';
+import Register from './Register'
 
 const Login = () => {
   const { login } = useContext(AuthContext);
@@ -20,6 +22,13 @@ const Login = () => {
           <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" required />
           <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" required />
           <button type="submit" className="btn">Login</button>
+          
+          <div className='links'>
+          <Link to = ''>Forgotten password</Link>
+          <Link to = '/Register'>Sign up</Link>
+          </div>
+          
+
         </form>
       </div>
     </div>

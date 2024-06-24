@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../assets/styles/Checkout.css';
+import Header from '../components/Header';
 
 const Checkout = () => {
   const [formData, setFormData] = useState({
@@ -29,6 +30,8 @@ const Checkout = () => {
   };
 
   return (
+    <>
+    <Header/>
     <div className="checkout">
       <h1>Checkout</h1>
       <form className="checkout-form" onSubmit={handleSubmit}>
@@ -156,6 +159,8 @@ const Checkout = () => {
         <Link to="/cart">Back to Cart</Link>
       </div>
     </div>
+    </>
+    
   );
 };
 

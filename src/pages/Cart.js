@@ -1,11 +1,13 @@
-// src/pages/Cart.js
 import React, { useState, useEffect } from 'react';
 import '../assets/styles/Cart.css';
+import { useNavigate } from 'react-router-dom';
+import Header from '../components/Header';
 
 const Cart = () => {
   const [cartItems, setCartItems] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
   const [totalQuantity, setTotalQuantity] = useState(0);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const storedCartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
@@ -45,20 +47,18 @@ const Cart = () => {
 
   const handleUpdateCart = () => {
     localStorage.setItem('cartItems', JSON.stringify(cartItems));
-    // Optionally, you can show a success message or modal here
   };
 
   const handleCheckout = () => {
-    // Store cart information in localStorage
     localStorage.setItem('checkoutCartItems', JSON.stringify(cartItems));
     localStorage.setItem('checkoutTotalPrice', totalPrice.toFixed(2));
     localStorage.setItem('checkoutTotalQuantity', totalQuantity);
-    
-    // Redirect to checkout page
-    window.location.href = '/checkout';
+    navigate('/checkout'); // Use navigate to redirect
   };
 
   return (
+    <>
+    <Header/>
     <div className="cart">
       <h1>Shopping Cart</h1>
       {cartItems.length === 0 ? (
@@ -93,6 +93,8 @@ const Cart = () => {
         </>
       )}
     </div>
+    </>
+    
   );
 };
 

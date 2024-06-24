@@ -1,4 +1,3 @@
-/* src/assets/styles/ProductCard.css */
 .product-card {
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -16,9 +15,36 @@
   transform: scale(1.05);
 }
 
+.product-card__image-container {
+  position: relative;
+}
+
 .product-card__image {
   width: 100%;
   height: auto;
+}
+
+.product-card__save-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #ccc; /* Default color */
+}
+
+.product-card__save-btn:hover .product-card__heart-icon {
+  color: #ff0000; /* Change color on hover */
+}
+
+.product-card__heart-icon {
+  transition: color 0.3s ease;
+}
+
+.product-card__heart-icon.saved {
+  color: #ff0000; /* Color when saved */
 }
 
 .product-card__info {

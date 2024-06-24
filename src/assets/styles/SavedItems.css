@@ -1,0 +1,10 @@
+.saved-items {
+    padding: 20px;
+  }
+  
+  .saved-items__grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  

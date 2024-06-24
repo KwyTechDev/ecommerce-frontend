@@ -9,6 +9,11 @@ const Checkout = () => {
     address: '',
     city: '',
     zip: '',
+    paymentMethod: 'creditCard',
+    cardNumber: '',
+    expirationDate: '',
+    cvv: '',
+    paypalEmail: ''
   });
 
   const handleChange = (e) => {
@@ -72,6 +77,77 @@ const Checkout = () => {
           onChange={handleChange}
           required
         />
+
+        <h3>Payment Method</h3>
+        <div>
+          <label>
+            <input
+              type="radio"
+              name="paymentMethod"
+              value="creditCard"
+              checked={formData.paymentMethod === 'creditCard'}
+              onChange={handleChange}
+            />
+            Credit Card
+          </label>
+          <label>
+            <input
+              type="radio"
+              name="paymentMethod"
+              value="paypal"
+              checked={formData.paymentMethod === 'paypal'}
+              onChange={handleChange}
+            />
+            PayPal
+          </label>
+        </div>
+
+        {formData.paymentMethod === 'creditCard' && (
+          <div className="credit-card-info">
+            <label htmlFor="cardNumber">Card Number:</label>
+            <input
+              type="text"
+              id="cardNumber"
+              name="cardNumber"
+              value={formData.cardNumber}
+              onChange={handleChange}
+              required
+            />
+            <label htmlFor="expirationDate">Expiration Date (MM/YY):</label>
+            <input
+              type="text"
+              id="expirationDate"
+              name="expirationDate"
+              value={formData.expirationDate}
+              onChange={handleChange}
+              required
+            />
+            <label htmlFor="cvv">CVV:</label>
+            <input
+              type="text"
+              id="cvv"
+              name="cvv"
+              value={formData.cvv}
+              onChange={handleChange}
+              required
+            />
+          </div>
+        )}
+
+        {formData.paymentMethod === 'paypal' && (
+          <div className="paypal-info">
+            <label htmlFor="paypalEmail">PayPal Email:</label>
+            <input
+              type="email"
+              id="paypalEmail"
+              name="paypalEmail"
+              value={formData.paypalEmail}
+              onChange={handleChange}
+              required
+            />
+          </div>
+        )}
+
         <button type="submit">Place Order</button>
       </form>
       <div className="checkout-summary">
